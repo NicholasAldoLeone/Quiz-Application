@@ -13,10 +13,6 @@ app.use(express.json());
 //   app.use(express.static("client/build"));
 // }
 
-// Passport configuration
-// const passport = require("passport");
-require("./services/passport");
-
 // Add routes, both API and view
 app.use(routes);
 
