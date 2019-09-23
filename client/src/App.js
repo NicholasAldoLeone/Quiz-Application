@@ -1,17 +1,22 @@
 import React from "react";
-// import HelloDiv from "./components/HelloDiv";
 import Navbar from "./components/Navbar";
-// import {Col, Row, Container } from './components/Grid'
 import Main from './components/Questions/Main';
+import Quizzes from "./pages/Quizzes.js"
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import './styles/quiztake.css';
+
+
 function App() {
   return( 
-<div>
-  {/* <HelloDiv />; */}
-   <Navbar />;
-   <Main />;
-   
-   </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path = "/homepage" component = {Quizzes} />
+
+        </Switch>
+      </div>
+    </Router>
   )
 };
 export default App;
